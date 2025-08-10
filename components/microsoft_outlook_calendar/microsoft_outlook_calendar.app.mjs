@@ -2,7 +2,7 @@ import { axios } from "@pipedream/platform";
 
 export default {
   type: "app",
-  app: "microsoft_outlook_calendar",
+  app: "moc",
   propDefinitions: {
     eventId: {
       label: "Event ID",
