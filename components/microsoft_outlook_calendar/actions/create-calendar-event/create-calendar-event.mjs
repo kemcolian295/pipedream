@@ -2,7 +2,7 @@ import microsoftOutlook from "../../microsoft_outlook_calendar.app.mjs";
 
 export default {
   type: "action",
-  key: "microsoft_outlook_calendar-create-calendar-event",
+  key: "olcal-create",
   version: "0.0.6",
   name: "Create Calendar Event",
   description: "Create an event in the user's default calendar. [See the documentation](https://docs.microsoft.com/en-us/graph/api/user-post-events)",
@@ -73,7 +73,7 @@ export default {
   async run({ $ }) {
     //RegExp to check time strings(yyyy-MM-ddThh:mm:ss)
     const re = /^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)$/;
-    if (!re.test(this.start) || !re.test(this.start)) {
+    if (!re.test(this.start) || !re.test(this.end)) {
       throw new Error("Please provide both start and end props in 'yyyy-MM-ddThh:mm:ss'");
     }
     const data = {
