@@ -5,7 +5,7 @@ const DEFAULT_LIMIT = 50;
 
 export default {
   type: "app",
-  app: "microsoft_outlook",
+  app: "mo",
   propDefinitions: {
     recipients: {
       label: "Recipients",
